@@ -19,14 +19,14 @@ export default class HolbertonCourse {
 
   set name(name) {
     if (name !== 'string') {
-      throw new Error('name is not a string');
+      throw new TypeError('name is not a string');
     }
     this._name = name;
   }
 
   set length(length) {
     if (length !== 'number') {
-      throw new Error('length is not a number');
+      throw new TypeError('length is not a number');
     }
     this._length = length;
   }
@@ -35,7 +35,7 @@ export default class HolbertonCourse {
     if (students instanceof Array) {
       this._students = students;
     } else {
-      throw new Error('students is not an array');
+      throw new TypeError('students is not an array');
     }
   }
 }
